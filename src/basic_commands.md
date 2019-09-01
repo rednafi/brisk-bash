@@ -36,7 +36,7 @@ ls -d */
 ls -d .*/ */
 ```
 
-## cat
+### cat
 ```bash
 # Display the contents of a file
 cat /path/to/foo

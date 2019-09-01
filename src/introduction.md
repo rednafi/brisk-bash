@@ -35,7 +35,7 @@ UNIX utilities and administration features depend on it.
 Variants of some popular shells:
 * C Shell or `csh` (The syntax has resemblence with C programming language)
 * Korn Shell or `ksh` (Similar to Bourne Shell with features from both Bourne and C Shell)
-* The Bourne Again Shell or BASH (Started with the GNU project in 1988)
+* The Bourne Again Shell or BASH (Started with the GNU project in 1988.)
 
 BASH is going to be our primary focus here.
 
