@@ -10,6 +10,11 @@ List of most frequently used commands:
 - `grep`
 - `lp`
 
+All of the following command summary can be found via 
+```bash
+curl cheat.sh/<prompt>
+```
+
 ### ls
 ```bash
 # Displays everything in the target directory
@@ -19,7 +24,7 @@ ls path/to/the/target/directory
 ls -a
 
 # Displays all files, along with the size (with unit suffixes) and timestamp
-ls -lh 
+ls -lh
 
 # Display files, sorted by size
 ls -S
