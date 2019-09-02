@@ -247,7 +247,7 @@ lp -i job_id -H resume
     .
     99
     ```
-## while loop
+### while loop
 * Calculate factorial of a given number
     ```bash
     counter=$1
