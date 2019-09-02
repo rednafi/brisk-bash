@@ -39,7 +39,7 @@ Variants of some popular shells:
 
 BASH is going to be our primary focus here.
 
-# A Few Basic Commands
+## A Few Basic Commands
 
 List of most frequently used commands:
 
