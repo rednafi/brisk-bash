@@ -1,0 +1,8 @@
+input_num = $1
+for num in $(seq 0 $input_num)
+do 
+   if [$num -lt $input_num]] 
+   then 
+       echo $num
+   fi
+done
