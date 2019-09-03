@@ -204,7 +204,8 @@ lp -i job_id -H resume
 
 ### Conditionals (if-else)
 
-* This 
+* This program takes in two numbers and an operation instruction and 
+returns the value according to the operation.
 ```bash
 
 echo "Enter two numbers and intented operation:
