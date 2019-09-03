@@ -204,7 +204,47 @@ lp -i job_id -H resume
 
 ### Conditionals (if-else)
 
-* 
+* This 
+```bash
+
+echo "Enter two numbers and intented operation:
+* for addition, write add
+* for subtraction, write sub
+* for multiplication, write mul
+* for division, write div
+
+(write quit to quit the program)" 
+
+num1=$1
+num2=$2
+operation=$3 
+
+if [ $num1 == "quit" ]
+then
+    break
+
+    elif [ $operation == "add" ]
+    then 
+        ans=$(( $num1 + $num2 ))
+        echo "addition: $ans"
+
+    elif [ $operation == "sub" ]
+    then 
+        ans=$(( $num1 - $num2 ))
+        echo "subtraction: $ans"
+
+    elif [ $operation == "mul" ]
+    then 
+        ans=$(( $num1 * $num2 ))
+        echo "multiplication: $ans"
+
+    elif [ $operation == "div" ]
+    then 
+        ans=$(( $num1 / $num2 ))
+        echo "division: $ans"
+
+fi
+    ```
 
 ### for loop
 
@@ -285,7 +325,20 @@ lp -i job_id -H resume
     ```
     Factorial of 5 is 120
     ```
-* 
+* The break statement will skip the while loop when user enters `quit`, otherwise it will keep adding two numbers
+  ```bash
+    while :
+    do
+        read -p "Enter two numnbers ( - 1 to quit ) : " a b
+        if [ $a -eq -1 ]
+        then
+            break
+        fi
+        ans=$(( a + b ))
+        echo $ans
+    done
+    ```
+
 
 ## Practical Usage Examples
     
