@@ -56,7 +56,10 @@ All of the following command summary can be found via
 curl cheat.sh/<prompt>
 ```
 
-### ls
+### ls 
+
+`ls` lists all the files and folders in a user specified directory
+
 ```bash
 # Displays everything in the target directory
 ls path/to/the/target/directory
@@ -78,6 +81,9 @@ ls -d .*/ */
 ```
 
 ### cat
+
+`cat` shows the contents of a user specified file
+
 ```bash
 # Display the contents of a file
 cat /path/to/foo
@@ -90,6 +96,9 @@ cat -b /path/to/foo
 ```
 
 ### cp
+
+`cp` copies files or folders from one directory to another
+
 ```bash
 # Create a copy of a file
 cp ~/Desktop/foo.txt ~/Downloads/foo.txt
@@ -105,6 +114,9 @@ cp foo.txt{,."$(date +%Y%m%d-%H%M%S)"}
 ```
 
 ### mv
+
+`mv` moves files or folders from one directory to another and can also be used to rename files or folders
+
 ```bash
 # Move a file from one place to another
 mv ~/Desktop/foo.txt ~/Documents/foo.txt
@@ -126,6 +138,9 @@ mv -t ~/Desktop/ file1 file2 file3
 ```
 
 ### grep
+
+`grep` can be used to search through the output of another command
+
 ```bash
 # Search a file for a pattern
 grep pattern file
@@ -159,6 +174,9 @@ ps aux | grep -E --color 'bash|$'
 ```
 
 ### lp
+
+`lp` prints the specified output via an available printer
+
 ```bash
 # lp
 # Print files.
@@ -183,6 +201,11 @@ lp -i job_id -H resume
 ```
 
 ## Basic Scripting Examples
+
+### Conditionals (if-else)
+
+* 
+
 ### for loop
 
 * Looping through 0 to 9 with increment 3 and printing the numbers
@@ -264,4 +287,5 @@ lp -i job_id -H resume
     ```
 * 
 
+## Practical Usage Examples
     
