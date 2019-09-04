@@ -201,7 +201,7 @@ lp -i job_id -H resume
   - Returns the value according to the operation
 
 
-  ```bash
+    ```bash
     #!/bin/bash
     echo "Enter two numbers and intented operation:
     * for addition, write add
@@ -240,51 +240,51 @@ lp -i job_id -H resume
             echo "division: $ans"
 
     fi
-  ```
-  ```
+    ```
+    ```
     $./script.sh 12 13 add
     25
-  ```
+    ```
 
 ### for loop
 
 * Looping through 0 to 9 with increment 3 and printing the numbers
 
-  ```bash
+    ```bash
     #!/bin/bash
     for var in {0..9..3}
     do
         echo $var
     done
-  ```
+    ```
 
-  ```
+    ```
     $ ./script.sh
     0
     3
     6
     9
-  ```
+    ```
 
 - Looping through files in a folder and printing them one by one
 
-  ```bash
+    ```bash
     #!/bin/bash
     for file in $(ls ./files) 
     do
         echo $file
     done
-  ```
-  
-  ```
+    ```
+
+    ```
     $ ./script.sh
     numbers.txt
     sorted_numbers.txt
-  ```
+    ```
 
 - Summing numbers from 0 to 100 and printing the sum
 
-  ```bash
+    ```bash
     #!/bin/bash
     sum=0
     for num in $(seq 0 100)
@@ -292,16 +292,16 @@ lp -i job_id -H resume
         sum=$(($sum+$num))
     done
     echo "Total sum is $sum"
-  ```
+    ```
 
-  ```
+    ```
     $ ./script.sh
     Total sum is 5050
-  ```
+    ```
 
 - Taking a range from user and printing all the numbers upto it
 
-  ```bash
+    ```bash
     #!/bin/bash
     input_number=$1
     for num in $(seq 0 $input_number)
@@ -311,22 +311,22 @@ lp -i job_id -H resume
         echo $num
     fi
     done
-  ```
+    ```
 
-  ```
+    ```
     $ ./script.sh 100
     0
     1
     .
     .
     99
-  ```
+    ```
 
   ### while loop
 
 - Calculate factorial of a given number
 
-  ```bash
+    ```bash
     #!/bin/bash
     counter=$1
     factorial=1
@@ -336,16 +336,16 @@ lp -i job_id -H resume
     counter=$(( $counter - 1 ))
     done
     echo "Factorial of $1 is $factorial"
-  ```
+    ```
 
-  ```
+    ```
     $ ./script.sh 5
     Factorial of 5 is 120
-  ```
+    ```
 
 - The break statement will skip the while loop when user enters `-1`, otherwise it will keep adding two numbers
 
-  ```bash
+    ```bash
     #!/bin/bash
     while :
     do
@@ -357,13 +357,13 @@ lp -i job_id -H resume
         ans=$(( a + b ))
         echo $ans
     done
-  ```
+    ```
 
-  ```
+    ```
     $ ./script.sh  10 20
     30
 
-  ```
+    ```
 
   ### functions
 
@@ -378,7 +378,7 @@ lp -i job_id -H resume
     ```bash
     #!/bin/bash
     file_count () {
-      ls -1 $1 | wc -l
+        ls -1 $1 | wc -l
     }
 
     # calling the function
