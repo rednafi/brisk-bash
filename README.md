@@ -1,5 +1,4 @@
 ## Table of Contents
-
 <!-- TOC --> 
 - [Introduction](#introduction)
 - [Shell](#shell)
@@ -16,7 +15,6 @@
     - [lp](#lp)
     - [clear](#clear)
     - [exit](#exit)
-    
 - [Basic Scripting Examples](#basic-scripting-examples)    
     - [Running a Shell Script](#running-a-shell-script)    
         - [conditionals (if-else)](#conditionals-if-else)
