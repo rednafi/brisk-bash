@@ -310,7 +310,7 @@ exit exit_code
     $ nano script.sh
     ```
 * Put your code in the `.sh` file
-* Make sure you put shebang `#!/bin/bash` at the beginning of each script, otherwise, the system wouldn't know which interpreter to use.
+* Make sure you put the shebang `#!/bin/bash` at the beginning of each script, otherwise, the system wouldn't know which interpreter to use.
 
 * Give permission to run:
 
