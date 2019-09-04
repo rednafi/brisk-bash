@@ -75,6 +75,8 @@ curl cheat.sh/<prompt>
 ```
 ### cd 
 
+`cd` is used to change directory
+
 ```bash
 #Go to the given directory
 cd path/to/directory
