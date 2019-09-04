@@ -202,7 +202,7 @@ lp -i job_id -H resume
 
 
   ```bash
-  #!/bin/bash
+    #!/bin/bash
     echo "Enter two numbers and intented operation:
     * for addition, write add
     * for subtraction, write sub
