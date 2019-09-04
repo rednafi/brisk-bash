@@ -32,7 +32,7 @@ BASH is going to be our primary focus here.
 
 ## A Few Basic Commands
 
-List of most frequently used commands. All of these commands can be run directly from a bash command line:
+List of most frequently used commands. All of these commands can be run directly from a bash command prompt:
 
 - `ls`
 - `cat`
@@ -201,7 +201,9 @@ lp -i job_id -H resume
     ```
     $ nano script.sh
     ```
-* Put your code there
+* Put your code in the `.sh` file
+* Make sure you put shebang `#!/bin/bash` at the beginning of each script, otherwise, the system wouldn't know which interpreter to use.
+
 * Give permission to run:
 
     ```
@@ -271,14 +273,14 @@ lp -i job_id -H resume
     ```
 
 * This program 
-    - Takes in two numbers and an operation instruction 
+    - Takes in two integers and an operation instruction 
     - Returns the value according to the operation
 
 
     ```bash
     #!/bin/bash
 
-    echo "Enter two numbers and intented operation:
+    echo "Enter two numbers and the intented operation:
     * for addition, write add
     * for subtraction, write sub
     * for multiplication, write mul
@@ -342,7 +344,7 @@ lp -i job_id -H resume
     9
     ```
 
-- Looping through files in a folder and printing them one by one
+* Looping through files in a folder and printing them one by one
 
     ```bash
     #!/bin/bash
@@ -359,7 +361,9 @@ lp -i job_id -H resume
     sorted_numbers.txt
     ```
 
-- Summing numbers from 0 to 100 and printing the sum
+* This program, 
+    - Doesn't take any argument
+    - Returns the summation of all the integers, starting from 0, upto 100
 
     ```bash
     #!/bin/bash
@@ -377,7 +381,9 @@ lp -i job_id -H resume
     Total sum is 5050
     ```
 
-- Taking a range from user and printing all the numbers upto it
+* This program,
+    - Takes in an integer as argument
+    - Prints all the numbers upto that number, starting from 0
 
     ```bash
     #!/bin/bash
@@ -403,7 +409,9 @@ lp -i job_id -H resume
 
   ### while loop
 
-- Calculate factorial of a given number
+* This program, 
+    - Takes in a single number as argument
+    - Returns the factorial of that number
 
     ```bash
     #!/bin/bash
@@ -423,7 +431,10 @@ lp -i job_id -H resume
     Factorial of 5 is 120
     ```
 
-- The break statement will skip the while loop when user enters `-1`, otherwise it will keep adding two numbers
+*   This program,
+    - Takes two integers as arguments
+    - Returns the summation of the numbers
+    - Sending `-1` as an input quits the program
 
     ```bash
     #!/bin/bash
@@ -443,12 +454,11 @@ lp -i job_id -H resume
     ```
     $ ./script.sh  10 20
     30
-
     ```
 
   ### functions
 
-    Functions are incredible tools when we need to reuse code. Creating functions are faily straightforward in bash.
+    Functions are incredible tools when we need to reuse code. Creating functions are fairly straight forward in bash.
 
 *   This function,
 
