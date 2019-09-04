@@ -1,4 +1,24 @@
-# Introduction
+## Table of Contents
+
+<!-- TOC --> 
+- [Introduction](#introduction)
+- [Shell](#shell)
+- [History](#history)
+- [A Few Basic Commands](#a-few-basic-commands)
+    - [ls](#ls)
+    - [cat](#cat)
+    - [cp](#cp)
+    - [mv](#mv)
+    - [grep](#grep)
+    - [lp](#lp)
+- [Basic Scripting Examples](#basic-scripting-examples)    
+    - [Running a Shell Script](#running-a-shell-script)    
+        - [conditionals (if-else)](#conditionals-if-else)
+        - [for loop](#for-loop)
+        - [while loop](#while-loop)
+<!-- /TOC -->
+
+## Introduction
 
 ## Shell
 
@@ -481,15 +501,14 @@ lp -i job_id -H resume
 
   ### functions
 
-    Functions are incredible tools when we need to reuse code. Creating functions are 
-    fairly straight forward in bash.
+    Functions are incredible tools when we need to reuse code. Creating functions are fairly straight 
+    forward in bash.
 
 *   This function,
 
     - Takes a directory as an input argument
     - Counts the number of files in that directory and prints that out
     - Note that this function ignores the dot files (The `ls -1` flag ignores dot files)
-
 
 
     ```bash
@@ -571,6 +590,4 @@ lp -i job_id -H resume
     /home/redowan/code/bash/files/sorted_numbers.txt
     ```
 
-
-## A Few Practical Examples
 
