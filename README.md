@@ -481,13 +481,15 @@ lp -i job_id -H resume
 
   ### functions
 
-    Functions are incredible tools when we need to reuse code. Creating functions are fairly straight forward in bash.
+    Functions are incredible tools when we need to reuse code. Creating functions are 
+    fairly straight forward in bash.
 
 *   This function,
 
     - Takes a directory as an input argument
     - Counts the number of files in that directory and prints that out
     - Note that this function ignores the dot files (The `ls -1` flag ignores dot files)
+
 
 
     ```bash
@@ -570,4 +572,5 @@ lp -i job_id -H resume
     ```
 
 
-## Practical Usage Examples
+## A Few Practical Examples
+
