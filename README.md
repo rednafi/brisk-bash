@@ -70,7 +70,7 @@ List of most frequently used commands. All of these commands can be run directly
 - `grep`
 - `lp`
 
-All of the following command summary can be found via:
+All of the following command summaries can be found via:
 
 ```bash
 curl cheat.sh/<prompt>
@@ -95,7 +95,7 @@ cd -
 
 ### ls
 
-`ls` lists all the files and folders in a user specified directory
+`ls` lists all the files and folders in a user-specified directory
 
 ```bash
 # Displays everything in the target directory
@@ -176,7 +176,7 @@ mv -t ~/Desktop/ file1 file2 file3
 
 ### mkdir
 
-`mkdir` is used to create folder in a directory
+`mkdir` is used to create a folder in a directory
 ```bash
 # Create a directory and all its parents
 mkdir -p foo/bar/baz
@@ -302,7 +302,7 @@ exit exit_code
 
 ### Running a Shell Script
 
-* Create a file with `.sh` extension. I have used Ubunutu's built in `nano` editor for that.
+* Create a file with `.sh` extension. I have used Ubuntu's built in `nano` editor for that.
 
     ```
     $ nano script.sh
@@ -614,7 +614,7 @@ exit exit_code
     ```
 
 *   This function,
-    - Takes in a short code for any of the following languages
+    - Takes in a shortcode for any of the following languages
       (a) `en` for English
       (b) `fr` for French
       (c) `bn` for bangla
