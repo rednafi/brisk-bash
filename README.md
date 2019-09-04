@@ -24,11 +24,11 @@
 
 ## Introduction
 
-Okay, here's a confession. I'm the type of person who never picks up a new skill unless I absolutely have to. Although I have been using debian based Linux personally and professionally for over a year, my knowledge on the command line and bash scripting have hopelessly remained stuck in a local minima. Sure, I know my way around the terminal but working as a data scientist didn't require me to know the nitty gritty details of bash scripting. And also, I have this tendency of solving every sort of automation and scripting problem with python but often that extra layer of dependency is undesirable. So, as I have started to learn the syntax and quirks of shell language consciously, I thought why not documenting the whole process. That gave birth to this. Treat this as a beginner's guide to grasp the most necessary details of shell scripting to get the job done.
+Okay, here's a confession. I'm the type of person who never picks up a new skill unless I absolutely have to. Although I have been using Debian based Linux personally and professionally for over a year, my knowledge on the command line and bash scripting have hopelessly remained stuck in a local minimum. Sure, I know my way around the terminal but working as a data scientist didn't require me to know the nitty-gritty details of bash scripting. And also, I have this tendency of solving every sort of automation and scripting problem with python but often that extra layer of dependency is undesirable. So, as I have started to learn the syntax and quirks of shell language consciously, I thought why not document the whole process. That gave birth to this. Treat this as a beginner's guide to grasp the most necessary details of shell scripting to get the job done.
 
 ## Shell
 
-Several layers of events take place whenever a linux command is entered into the termimal. The top layer of that is known as _shell_.
+Several layers of events take place whenever a Linux command is entered into the terminal. The top layer of that is known as _shell_.
 
 `A shell is any user interface to the UNIX operating system, i.e., any program that takes input from the user, translates it into instructions that the operating system can understand, and conveys the operating system's output back to the user.`
 
@@ -50,7 +50,7 @@ The first major shell was the Bourne shell (named after its inventor, Steven Bou
 
 Variants of some popular shells:
 
-- C Shell or `csh` (The syntax has resemblence with C programming language)
+- C Shell or `csh` (The syntax has resemblance with C programming language)
 - Korn Shell or `ksh` (Similar to Bourne Shell with features from both Bourne and C Shell)
 - The Bourne Again Shell or BASH (Started with the GNU project in 1988.)
 
@@ -119,7 +119,7 @@ ls -d .*/ */
 
 ### cat
 
-`cat` shows the contents of a user specified file
+`cat` shows the contents of a user-specified file
 
 ```bash
 # Display the contents of a file
@@ -256,7 +256,7 @@ lp path/to/filename
 # Print a file to a named printer (see `lpstat` command):
 lp -d printer_name path/to/filename
 
-# Print N copies of file to default printer (replace N with desired number of copies):
+# Print N copies of a file to the default printer (replace N with the desired number of copies):
 lp -n N path/to/filename
 
 # Print only certain pages to the default printer (print pages 1, 3-5, and 16):
@@ -302,7 +302,7 @@ exit exit_code
 
 ### Running a Shell Script
 
-* Create a file with `.sh` extension. I have used Ubuntu's built in `nano` editor for that.
+* Create a file with `.sh` extension. I have used Ubuntu's built-in `nano` editor for that.
 
     ```
     $ nano script.sh
@@ -386,7 +386,7 @@ exit exit_code
     ```bash
     #!/bin/bash
 
-    echo "Enter two numbers and the intented operation:
+    echo "Enter two numbers and the intended operation:
     * for addition, write add
     * for subtraction, write sub
     * for multiplication, write mul
@@ -469,7 +469,7 @@ exit exit_code
 
 * This program, 
     - Doesn't take any argument
-    - Returns the summation of all the integers, starting from 0, upto 100
+    - Returns the summation of all the integers, starting from 0, up to 100
 
     ```bash
     #!/bin/bash
@@ -488,8 +488,8 @@ exit exit_code
     ```
 
 * This program,
-    - Takes in an integer as argument
-    - Prints all the numbers upto that number, starting from 0
+    - Takes in an integer as an argument
+    - Prints all the numbers up to that number, starting from 0
 
     ```bash
     #!/bin/bash
@@ -516,7 +516,7 @@ exit exit_code
   ### while loop
 
 * This program, 
-    - Takes in a single integer as argument
+    - Takes in a single integer as an argument
     - Returns the factorial of that number
 
     ```bash
