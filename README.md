@@ -200,8 +200,10 @@ lp -i job_id -H resume
   - Takes in two numbers and an operation instruction 
   - Returns the value according to the operation
 
+
   ```bash
-  echo "Enter two numbers and intented operation:
+  #!/bin/bash
+    echo "Enter two numbers and intented operation:
     * for addition, write add
     * for subtraction, write sub
     * for multiplication, write mul
@@ -239,43 +241,52 @@ lp -i job_id -H resume
 
     fi
   ```
+  ```
+    $./script.sh 12 13 add
+    25
+  ```
 
 ### for loop
 
 * Looping through 0 to 9 with increment 3 and printing the numbers
 
   ```bash
-  for var in {0..9..3}
+    #!/bin/bash
+    for var in {0..9..3}
     do
         echo $var
     done
   ```
 
   ```
-  0
-  3
-  6
-  9
+    $ ./script.sh
+    0
+    3
+    6
+    9
   ```
 
 - Looping through files in a folder and printing them one by one
 
   ```bash
-  for file in $(ls src/files) 
+    #!/bin/bash
+    for file in $(ls ./files) 
     do
         echo $file
     done
   ```
-
+  
   ```
-  numbers.txt
+    $ ./script.sh
+    numbers.txt
     sorted_numbers.txt
   ```
 
 - Summing numbers from 0 to 100 and printing the sum
 
   ```bash
-  sum=0
+    #!/bin/bash
+    sum=0
     for num in $(seq 0 100)
     do 
         sum=$(($sum+$num))
@@ -284,13 +295,15 @@ lp -i job_id -H resume
   ```
 
   ```
-  Total sum is 5050
+    $ ./script.sh
+    Total sum is 5050
   ```
 
 - Taking a range from user and printing all the numbers upto it
 
   ```bash
-  input_number=$1
+    #!/bin/bash
+    input_number=$1
     for num in $(seq 0 $input_number)
     do 
     if [ $num -lt $input_number ]
@@ -301,7 +314,8 @@ lp -i job_id -H resume
   ```
 
   ```
-  0
+    $ ./script.sh 100
+    0
     1
     .
     .
@@ -313,7 +327,8 @@ lp -i job_id -H resume
 - Calculate factorial of a given number
 
   ```bash
-  counter=$1
+    #!/bin/bash
+    counter=$1
     factorial=1
     while [ $counter -gt 0 ] 
     do
@@ -324,13 +339,15 @@ lp -i job_id -H resume
   ```
 
   ```
-  Factorial of 5 is 120
+    $ ./script.sh 5
+    Factorial of 5 is 120
   ```
 
 - The break statement will skip the while loop when user enters `-1`, otherwise it will keep adding two numbers
 
   ```bash
-  while :
+    #!/bin/bash
+    while :
     do
         read -p "Enter two numnbers ( - 1 to quit ) : " a b
         if [ $a -eq -1 ]
@@ -343,6 +360,8 @@ lp -i job_id -H resume
   ```
 
   ```
+    $ ./script.sh  10 20
+    30
 
   ```
 
@@ -357,12 +376,17 @@ lp -i job_id -H resume
   - Not that this function ignores the dot files (The `ls -1` flag ignores dot files)
 
     ```bash
+    #!/bin/bash
     file_count () {
       ls -1 $1 | wc -l
     }
 
     # calling the function
     echo $( file_count $1 )
+    ```
+    ```
+    $ ./script.sh ./files
+    $ 2
     ```
 
 ## Practical Usage Examples
