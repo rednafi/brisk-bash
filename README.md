@@ -679,7 +679,8 @@ exit exit_code
 ## Sources 
 
 Here are some awesome sources where you can always look into if you get stuck:
-    - [Command Line Crash Course](https://learnpythonthehardway.org/book/appendixa.html)
-    - [Ryans Bash Tutorial](https://ryanstutorials.net/bash-scripting-tutorial/)
-    - [W3 School CLI Tutorial](https://www.w3schools.com/whatis/whatis_cli.asp)
+
+- [Command Line Crash Course](https://learnpythonthehardway.org/book/appendixa.html)
+- [Ryans Bash Tutorial](https://ryanstutorials.net/bash-scripting-tutorial/)
+- [W3 School CLI Tutorial](https://www.w3schools.com/whatis/whatis_cli.asp)
 
