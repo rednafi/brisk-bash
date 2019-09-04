@@ -194,6 +194,27 @@ lp -i job_id -H resume
 
 ## Basic Scripting Examples
 
+### Running a Shell Script
+
+* Create a file with `.sh` extension. I have used Ubunutu's built in `nano` editor for that.
+    ```
+    $ nano script.sh
+    ```
+* Put your code there
+* Give permission to run:
+    ```
+    $ chmod +x script.sh
+    ```
+* Run the script via:
+    ```
+    $ ./script
+    ```
+* If the script takes in one or multiple arguments, then place those with a space in between.
+    ```
+    $ ./script arg1 arg2
+    ```
+
+
 ### Conditionals (if-else)
 
 * This program 
