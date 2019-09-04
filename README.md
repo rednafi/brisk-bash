@@ -21,7 +21,7 @@
         - [for loop](#for-loop)
         - [while loop](#while-loop)
         - [functions](#functions)
-    - [Source](#source)
+- [External Resource](#external-resources)
 <!-- /TOC -->
 
 ## Introduction
@@ -678,7 +678,7 @@ exit exit_code
     /home/redowan/code/bash/files/sorted_numbers.txt
     ```
 
-## Sources 
+## External Resources 
 
 Here are some awesome sources where you can always look into if you get stuck:
 
