@@ -20,6 +20,8 @@
         - [conditionals (if-else)](#conditionals-if-else)
         - [for loop](#for-loop)
         - [while loop](#while-loop)
+        - [functions](#functions)
+    - [Source](#source)
 <!-- /TOC -->
 
 ## Introduction
