@@ -1,13 +1,9 @@
 #!/bin/bash
 
-# declaring the function 
-return_text () {
-dir=$1
-for file in $dir"/*.txt"
-do 
-    echo "$( realpath $file )"
-done
-
-}
-
-echo "$( return_text $1 )"
+number=$1
+if [ $((number%2)) -eq 0 ]
+then 
+    echo "Even"
+else 
+    echo "Odd"
+fi

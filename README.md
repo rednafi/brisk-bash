@@ -219,11 +219,60 @@ lp -i job_id -H resume
     ```
 
 
-### Conditionals (if-else)
+### conditionals (if-else)
+
+* This program
+    - Takes in two numbers as arguments
+    - Compares if one number is greater than the other or if they are equal 
+    - Returns the greater of the two numbers or if they are equal, returns equal 
+
+    ```bash
+    #!/bin/bash
+
+    number1=$1
+    number2=$2
+    if [ $number1 -eq $number2 ]
+    then
+        echo "The numbers are equal"
+
+    elif [ $number1 -gt $number2 ]
+    then
+        echo "The greater number is $number1"
+
+    elif [ $number2 -gt $number1 ]
+    then
+        echo "The greater number is $number2"
+    fi
+    ```
+    ```
+    $ ./script.sh 12 13
+    The greater number is 13
+    ```
+
+* This program
+    - Takes a single number as an argument
+    - Checks whether the number is Odd or Even
+    - Returns Odd or Even accordingly
+
+    ```bash
+    #!/bin/bash
+
+    number=$1
+    if [ $((number%2)) -eq 0 ]
+    then 
+        echo "Even"
+    else 
+        echo "Odd"
+    fi
+    ```
+    ```
+    $ ./script.sh 20
+    Even
+    ```
 
 * This program 
-  - Takes in two numbers and an operation instruction 
-  - Returns the value according to the operation
+    - Takes in two numbers and an operation instruction 
+    - Returns the value according to the operation
 
 
     ```bash
