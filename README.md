@@ -24,6 +24,8 @@
 
 ## Introduction
 
+Okay, here's a confession. I'm the type of person who never picks up a new skill unless I absolutely have to. Although I have been using debian based Linux personally and professionally for over a year, my knowledge on the command line and bash scripting have hopelessly remained stuck in a local minima. Sure, I know my way around the terminal but working as a data scientist didn't require me to know the nitty gritty details of bash scripting. And also, I have this tendency of solving every sort of automation and scripting problem with python but often that extra layer of dependency is undesirable. So, as I have started to learn the syntax and quirks of shell language consciously, I thought why not documenting the whole thing. That gave birth to this. Treat this as a beginners guide to grasp the most necessary details of shell scripting to get the job done.
+
 ## Shell
 
 Several layers of events take place whenever a linux command is entered into the termimal. The top layer of that is known as _shell_.
