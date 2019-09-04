@@ -5,12 +5,18 @@
 - [Shell](#shell)
 - [History](#history)
 - [A Few Basic Commands](#a-few-basic-commands)
+    - [cd](#cd)
     - [ls](#ls)
     - [cat](#cat)
     - [cp](#cp)
     - [mv](#mv)
+    - [mkdir](#mkdir)
+    - [rm](#rm)
     - [grep](#grep)
     - [lp](#lp)
+    - [clear](#clear)
+    - [exit](#exit)
+    
 - [Basic Scripting Examples](#basic-scripting-examples)    
     - [Running a Shell Script](#running-a-shell-script)    
         - [conditionals (if-else)](#conditionals-if-else)
@@ -54,10 +60,12 @@ BASH is going to be our primary focus here.
 
 List of most frequently used commands. All of these commands can be run directly from a bash command prompt:
 
+- `cd`
 - `ls`
 - `cat`
 - `cp`
 - `mv`
+- `mkdir`
 - `rm`
 - `grep`
 - `lp`
@@ -66,6 +74,21 @@ All of the following command summary can be found via:
 
 ```bash
 curl cheat.sh/<prompt>
+```
+### cd 
+
+```bash
+#Go to the given directory
+cd path/to/directory
+
+#Go to home directory of current user
+cd
+
+#Go up to the parent of the current directory
+cd ..
+
+#Go to the previously chosen directory
+cd -
 ```
 
 ### ls
@@ -149,6 +172,35 @@ mv -n ~/Desktop/foo.txt ~/Documents/foo.txt
 mv -t ~/Desktop/ file1 file2 file3
 ```
 
+### mkdir
+
+`mkdir` is used to create folder in a directory
+```bash
+# Create a directory and all its parents
+mkdir -p foo/bar/baz
+
+# Create foo/bar and foo/baz directories
+mkdir -p foo/{bar,baz}
+
+# Create the foo/bar, foo/baz, foo/baz/zip and foo/baz/zap directories
+mkdir -p foo/{bar,baz/{zip,zap}}
+```
+
+### rm
+
+`rm` is mainly used to delete files or folders
+
+```bash
+# Remove files and subdirs
+rm -rf path/to/the/target/
+
+# Ignore non existent files
+rm -f path/to/the/target
+
+# Remove a file with his inode
+find /tmp/ -inum 6666 -exec rm -i '{}' \;
+```
+
 ### grep
 
 `grep` can be used to search through the output of another command
@@ -210,6 +262,37 @@ lp -P 1,3-5,16 path/to/filename
 
 # Resume printing a job:
 lp -i job_id -H resume
+```
+
+### clear
+
+`clear` is used to clear the CLI window
+
+```bash
+# clear
+# Clears the screen of the terminal.
+
+# Clear the screen (equivalent to typing Control-L when using the bash shell):
+clear
+```
+
+### exit
+
+`exit` closes the CLI window
+
+```bash
+# exit
+# Quit the current CMD instance or the current batch file.
+# More information: <https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/exit>.
+
+# Quit the current CMD instance:
+exit
+
+# Quit the current batch script:
+exit /b
+
+# Quit using a specific exit code:
+exit exit_code
 ```
 
 ## Basic Scripting Examples
@@ -590,4 +673,9 @@ lp -i job_id -H resume
     /home/redowan/code/bash/files/sorted_numbers.txt
     ```
 
+## Sources 
+Here are some awesome sources where you can always look into if you get stuck
+    - [Command Line Crash Course](https://learnpythonthehardway.org/book/appendixa.html) 
+    - [Ryans Bash Tutorial](https://ryanstutorials.net/bash-scripting-tutorial/)
+    - [W3 School CLI Tutorial](https://www.w3schools.com/whatis/whatis_cli.asp) 
 
