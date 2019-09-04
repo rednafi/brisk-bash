@@ -461,6 +461,7 @@ lp -i job_id -H resume
     - Takes a directory as an argument
     - Loop through the files
     - Only returns the text files with full path
+    
 
     ```bash
     #!/bin/bash
