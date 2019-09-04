@@ -407,6 +407,7 @@ lp -i job_id -H resume
     - Counts the number of files in that directory and prints that out
     - Note that this function ignores the dot files (The `ls -1` flag ignores dot files)
 
+
     ```bash
     #!/bin/bash
 
@@ -422,6 +423,7 @@ lp -i job_id -H resume
     $ ./script.sh ./files
     $ 2
     ```
+
 *   This function,
     - Takes in a short code for any of the following languages
       (a) `en` for English
@@ -429,6 +431,7 @@ lp -i job_id -H resume
       (c) `bn` for bangla
 
     - Returns a welcome message in the selected language
+
 
     ```bash
     #!/bin/bash
@@ -461,7 +464,7 @@ lp -i job_id -H resume
     - Takes a directory as an argument
     - Loop through the files
     - Only returns the text files with full path
-    
+
 
     ```bash
     #!/bin/bash
