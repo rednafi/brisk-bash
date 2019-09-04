@@ -1,14 +1,10 @@
-# Introduction 
+# Introduction
 
 ## Shell
 
-Several layers of events take place whenever a linux command is entered into the termimal. The top layer of that is known as *shell*.
+Several layers of events take place whenever a linux command is entered into the termimal. The top layer of that is known as _shell_.
 
-`A shell is any
-user interface to the UNIX operating system, i.e., any
-program that takes input from the user, translates it into
-instructions that the operating system can understand, and
-conveys the operating system's output back to the user.`
+`A shell is any user interface to the UNIX operating system, i.e., any program that takes input from the user, translates it into instructions that the operating system can understand, and conveys the operating system's output back to the user.`
 
 Let's look at an example:
 
@@ -18,30 +14,25 @@ sort -n src/files/numbers.txt > src/files/sorted_numbers.txt
 
 This command will perform the following tasks:
 
-* Go to the `src/files` directory
-* Sort the numbers in the `numbers.txt` files in ascending order
-* Save the result in a new file called `sorted_numbers.txt` in the same directory
+- Go to the `src/files` directory
+- Sort the numbers in the `numbers.txt` files in ascending order
+- Save the result in a new file called `sorted_numbers.txt` in the same directory
 
 ## History
 
-The first major shell was the Bourne shell (named after its
-inventor, Steven Bourne); it was included in the first
-popular version of UNIX, Version 7, starting in 1979.
-The Bourne shell is known on the system as `sh`. Although
-UNIX has gone through many, many changes, the Bourne
-shell is still popular and essentially unchanged. Several
-UNIX utilities and administration features depend on it.
+The first major shell was the Bourne shell (named after its inventor, Steven Bourne); it was included in the first popular version of UNIX, Version 7, starting in 1979. The Bourne shell is known on the system as `sh`. Although UNIX has gone through many, many changes, the Bourne shell is still popular and essentially unchanged. Several UNIX utilities and administration features depend on it.
 
 Variants of some popular shells:
-* C Shell or `csh` (The syntax has resemblence with C programming language)
-* Korn Shell or `ksh` (Similar to Bourne Shell with features from both Bourne and C Shell)
-* The Bourne Again Shell or BASH (Started with the GNU project in 1988.)
+
+- C Shell or `csh` (The syntax has resemblence with C programming language)
+- Korn Shell or `ksh` (Similar to Bourne Shell with features from both Bourne and C Shell)
+- The Bourne Again Shell or BASH (Started with the GNU project in 1988.)
 
 BASH is going to be our primary focus here.
 
 ## A Few Basic Commands
 
-List of most frequently used commands:
+List of most frequently used commands. All of these commands can be run directly from a bash command line:
 
 - `ls`
 - `cat`
@@ -51,12 +42,13 @@ List of most frequently used commands:
 - `grep`
 - `lp`
 
-All of the following command summary can be found via 
+All of the following command summary can be found via
+
 ```bash
 curl cheat.sh/<prompt>
 ```
 
-### ls 
+### ls
 
 `ls` lists all the files and folders in a user specified directory
 
@@ -204,98 +196,101 @@ lp -i job_id -H resume
 
 ### Conditionals (if-else)
 
-* This program takes in two numbers and an operation instruction and 
-returns the value according to the operation.
-```bash
+* This program 
+  - Takes in two numbers and an operation instruction 
+  - Returns the value according to the operation
 
-echo "Enter two numbers and intented operation:
-* for addition, write add
-* for subtraction, write sub
-* for multiplication, write mul
-* for division, write div
+  ```bash
+  echo "Enter two numbers and intented operation:
+    * for addition, write add
+    * for subtraction, write sub
+    * for multiplication, write mul
+    * for division, write div
 
-(write quit to quit the program)" 
+    (write quit to quit the program)" 
 
-num1=$1
-num2=$2
-operation=$3 
+    num1=$1
+    num2=$2
+    operation=$3 
 
-if [ $num1 == "quit" ]
-then
-    break
+    if [ $num1 == "quit" ]
+    then
+        break
 
-    elif [ $operation == "add" ]
-    then 
-        ans=$(( $num1 + $num2 ))
-        echo "addition: $ans"
+        elif [ $operation == "add" ]
+        then 
+            ans=$(( $num1 + $num2 ))
+            echo "addition: $ans"
 
-    elif [ $operation == "sub" ]
-    then 
-        ans=$(( $num1 - $num2 ))
-        echo "subtraction: $ans"
+        elif [ $operation == "sub" ]
+        then 
+            ans=$(( $num1 - $num2 ))
+            echo "subtraction: $ans"
 
-    elif [ $operation == "mul" ]
-    then 
-        ans=$(( $num1 * $num2 ))
-        echo "multiplication: $ans"
+        elif [ $operation == "mul" ]
+        then 
+            ans=$(( $num1 * $num2 ))
+            echo "multiplication: $ans"
 
-    elif [ $operation == "div" ]
-    then 
-        ans=$(( $num1 / $num2 ))
-        echo "division: $ans"
+        elif [ $operation == "div" ]
+        then 
+            ans=$(( $num1 / $num2 ))
+            echo "division: $ans"
 
-fi
-```
+    fi
+  ```
 
 ### for loop
 
 * Looping through 0 to 9 with increment 3 and printing the numbers
 
-    ```bash
-    for var in {0..9..3}
+  ```bash
+  for var in {0..9..3}
     do
         echo $var
     done
-    ```
-    ```
-    0
-    3
-    6
-    9
-    ```
+  ```
 
-  
+  ```
+  0
+  3
+  6
+  9
+  ```
 
-* Looping through files in a folder and printing them one by one
+- Looping through files in a folder and printing them one by one
 
-    ```bash
-    for file in $(ls src/files) 
+  ```bash
+  for file in $(ls src/files) 
     do
         echo $file
     done
-    ```
-    ```
-    numbers.txt
+  ```
+
+  ```
+  numbers.txt
     sorted_numbers.txt
-    ```
+  ```
 
-* Summing numbers from 0 to 100 and printing the sum
+- Summing numbers from 0 to 100 and printing the sum
 
-    ```bash 
-    sum=0
+  ```bash
+  sum=0
     for num in $(seq 0 100)
     do 
         sum=$(($sum+$num))
     done
     echo "Total sum is $sum"
-    ``` 
-    ```
-    Total sum is 5050
-    ```
-* Taking a range from user and printing all the numbers upto it
+  ```
 
-    ```bash
-    input_number=$1
+  ```
+  Total sum is 5050
+  ```
+
+- Taking a range from user and printing all the numbers upto it
+
+  ```bash
+  input_number=$1
     for num in $(seq 0 $input_number)
     do 
     if [ $num -lt $input_number ]
@@ -303,18 +298,22 @@ fi
         echo $num
     fi
     done
-    ```
-    ```
-    0
+  ```
+
+  ```
+  0
     1
     .
     .
     99
-    ```
-### while loop
-* Calculate factorial of a given number
-    ```bash
-    counter=$1
+  ```
+
+  ### while loop
+
+- Calculate factorial of a given number
+
+  ```bash
+  counter=$1
     factorial=1
     while [ $counter -gt 0 ] 
     do
@@ -322,13 +321,16 @@ fi
     counter=$(( $counter - 1 ))
     done
     echo "Factorial of $1 is $factorial"
-    ```
-    ```
-    Factorial of 5 is 120
-    ```
-* The break statement will skip the while loop when user enters `quit`, otherwise it will keep adding two numbers
+  ```
+
+  ```
+  Factorial of 5 is 120
+  ```
+
+- The break statement will skip the while loop when user enters `-1`, otherwise it will keep adding two numbers
+
   ```bash
-    while :
+  while :
     do
         read -p "Enter two numnbers ( - 1 to quit ) : " a b
         if [ $a -eq -1 ]
@@ -338,8 +340,29 @@ fi
         ans=$(( a + b ))
         echo $ans
     done
+  ```
+
+  ```
+
+  ```
+
+  ### functions
+
+  Functions are incredible tools when we need to reuse code. Creating functions are faily straightforward in bash.
+
+- This function,
+
+  - Takes a directory as an input argument
+  - Counts the number of files and prints that out
+  - Not that this function ignores the dot files (The `ls -1` flag ignores dot files)
+
+    ```bash
+    file_count () {
+      ls -1 $1 | wc -l
+    }
+
+    # calling the function
+    echo $( file_count $1 )
     ```
 
-
 ## Practical Usage Examples
-    
