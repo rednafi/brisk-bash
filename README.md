@@ -228,7 +228,7 @@ lp -i job_id -H resume
 
     ```bash
     #!/bin/bash
-    
+
     echo "Enter two numbers and intented operation:
     * for addition, write add
     * for subtraction, write sub
@@ -318,7 +318,7 @@ lp -i job_id -H resume
     sum=0
     for num in $(seq 0 100)
     do 
-        sum=$(($sum+$num))
+        sum=$(($sum + $num))
     done
     echo "Total sum is $sum"
     ```
@@ -363,7 +363,7 @@ lp -i job_id -H resume
     factorial=1
     while [ $counter -gt 0 ] 
     do
-    factorial=$(( $factorial*$counter ))
+    factorial=$(( $factorial * $counter ))
     counter=$(( $counter - 1 ))
     done
     echo "Factorial of $1 is $factorial"
@@ -399,13 +399,13 @@ lp -i job_id -H resume
 
   ### functions
 
-  Functions are incredible tools when we need to reuse code. Creating functions are faily straightforward in bash.
+    Functions are incredible tools when we need to reuse code. Creating functions are faily straightforward in bash.
 
 *   This function,
 
-  - Takes a directory as an input argument
-  - Counts the number of files in that directory and prints that out
-  - Note that this function ignores the dot files (The `ls -1` flag ignores dot files)
+    - Takes a directory as an input argument
+    - Counts the number of files in that directory and prints that out
+    - Note that this function ignores the dot files (The `ls -1` flag ignores dot files)
 
     ```bash
     #!/bin/bash
@@ -424,27 +424,27 @@ lp -i job_id -H resume
     ```
 *   This function,
     - Takes in a short code for any of the following languages
-      a) `en` for English
-      b) `fr` for French
-      c) `bn` for bangla
+      (a) `en` for English
+      (b) `fr` for French
+      (c) `bn` for bangla
 
     - Returns a welcome message in the selected language
 
     ```bash
     #!/bin/bash
     
-    # declaring the function 
+    # declaring the function
     greetings () {
         language=$1
-        if [ $language == "en" ] 
+        if [ $language == "en" ]
         then
-            echo "1"
-            elif [ $language == "fr" ] 
+            echo "Greetings Mortals!"
+            elif [ $language == "fr" ]
             then
-                echo "2"
-            elif [ $language == "bn" ] 
+                echo "Salutations Mortels!"
+            elif [ $language == "bn" ]
             then
-                echo "3"
+                echo "নশ্বরকে শুভেচ্ছা!"
         fi
 
     }
@@ -452,5 +452,36 @@ lp -i job_id -H resume
     # calling the function
     echo $( greetings $1 )
     ```
+    ```
+    $ ./script.sh en
+    Greetings Mortals!
+    ```
+
+*   This function, 
+    - Takes a directory as an argument
+    - Loop through the files
+    - Only returns the text files with full path
+
+    ```bash
+    #!/bin/bash
+
+    # declaring the function 
+    return_text () {
+    dir=$1
+    for file in $dir"/*.txt"
+    do 
+        echo "$( realpath $file )"
+    done
+
+    }
+
+    echo "$( return_text $1 )"
+    ```
+    ```
+    $ ./script.sh
+    /home/redowan/code/bash/files/numbers.txt
+    /home/redowan/code/bash/files/sorted_numbers.txt
+    ```
+
 
 ## Practical Usage Examples
