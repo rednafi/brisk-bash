@@ -212,7 +212,7 @@ lp -i job_id -H resume
     ```
     $ ./script
     ```
-* If the script takes in one or multiple arguments, then place those with a space in between.
+* If the script takes in one or multiple arguments, then place those with spaces in between.
 
     ```
     $ ./script arg1 arg2
@@ -228,6 +228,7 @@ lp -i job_id -H resume
 
     ```bash
     #!/bin/bash
+    
     echo "Enter two numbers and intented operation:
     * for addition, write add
     * for subtraction, write sub
@@ -267,7 +268,7 @@ lp -i job_id -H resume
     fi
     ```
     ```
-    $./script.sh 12 13 add
+    $ ./script.sh 12 13 add
     25
     ```
 
@@ -277,6 +278,7 @@ lp -i job_id -H resume
 
     ```bash
     #!/bin/bash
+
     for var in {0..9..3}
     do
         echo $var
@@ -295,6 +297,7 @@ lp -i job_id -H resume
 
     ```bash
     #!/bin/bash
+
     for file in $(ls ./files) 
     do
         echo $file
@@ -311,6 +314,7 @@ lp -i job_id -H resume
 
     ```bash
     #!/bin/bash
+
     sum=0
     for num in $(seq 0 100)
     do 
@@ -328,6 +332,7 @@ lp -i job_id -H resume
 
     ```bash
     #!/bin/bash
+
     input_number=$1
     for num in $(seq 0 $input_number)
     do 
@@ -353,6 +358,7 @@ lp -i job_id -H resume
 
     ```bash
     #!/bin/bash
+
     counter=$1
     factorial=1
     while [ $counter -gt 0 ] 
@@ -372,6 +378,7 @@ lp -i job_id -H resume
 
     ```bash
     #!/bin/bash
+
     while :
     do
         read -p "Enter two numnbers ( - 1 to quit ) : " a b
@@ -394,14 +401,16 @@ lp -i job_id -H resume
 
   Functions are incredible tools when we need to reuse code. Creating functions are faily straightforward in bash.
 
-- This function,
+*   This function,
 
   - Takes a directory as an input argument
-  - Counts the number of files and prints that out
-  - Not that this function ignores the dot files (The `ls -1` flag ignores dot files)
+  - Counts the number of files in that directory and prints that out
+  - Note that this function ignores the dot files (The `ls -1` flag ignores dot files)
 
     ```bash
     #!/bin/bash
+
+    # declaring the function
     file_count () {
         ls -1 $1 | wc -l
     }
@@ -412,6 +421,36 @@ lp -i job_id -H resume
     ```
     $ ./script.sh ./files
     $ 2
+    ```
+*   This function,
+    - Takes in a short code for any of the following languages
+      a) `en` for English
+      b) `fr` for French
+      c) `bn` for bangla
+
+    - Returns a welcome message in the selected language
+
+    ```bash
+    #!/bin/bash
+    
+    # declaring the function 
+    greetings () {
+        language=$1
+        if [ $language == "en" ] 
+        then
+            echo "1"
+            elif [ $language == "fr" ] 
+            then
+                echo "2"
+            elif [ $language == "bn" ] 
+            then
+                echo "3"
+        fi
+
+    }
+
+    # calling the function
+    echo $( greetings $1 )
     ```
 
 ## Practical Usage Examples
