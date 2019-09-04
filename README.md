@@ -455,6 +455,29 @@ lp -i job_id -H resume
     $ ./script.sh  10 20
     30
     ```
+*   This program,
+    - Takes in a text filepath as argument
+    - Reads and prints out each line of the file
+
+    ```bash 
+    #!/bin/bash
+
+    file=$1
+
+    while read -r line
+    do
+        echo $line
+    done < "$file"
+    ```
+    ```
+    $ ./script.sh files/numbers.txt
+    5
+    55
+    .
+    .
+    11
+    10
+    ```
 
   ### functions
 
@@ -532,7 +555,7 @@ lp -i job_id -H resume
     return_text () {
     dir=$1
     for file in $dir"/*.txt"
-    do 
+    do
         echo "$( realpath $file )"
     done
 

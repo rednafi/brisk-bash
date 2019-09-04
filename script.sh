@@ -1,9 +1,8 @@
 #!/bin/bash
 
-number=$1
-if [ $((number%2)) -eq 0 ]
-then 
-    echo "Even"
-else 
-    echo "Odd"
-fi
+file=$1
+
+while read -r line
+do
+    echo $line
+done < "$file"
