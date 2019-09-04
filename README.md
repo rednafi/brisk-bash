@@ -42,7 +42,7 @@ List of most frequently used commands. All of these commands can be run directly
 - `grep`
 - `lp`
 
-All of the following command summary can be found via
+All of the following command summary can be found via:
 
 ```bash
 curl cheat.sh/<prompt>
@@ -223,10 +223,10 @@ lp -i job_id -H resume
 
 ### conditionals (if-else)
 
-* This program
-    - Takes in two numbers as arguments
-    - Compares if one number is greater than the other or if they are equal 
-    - Returns the greater of the two numbers or if they are equal, returns equal 
+* This program,
+    - Takes in two integers as arguments
+    - Compares if one number is greater than the other or if they are equal
+    - Returns the greater of the two numbers or if they are equal, returns equal
 
     ```bash
     #!/bin/bash
@@ -251,7 +251,7 @@ lp -i job_id -H resume
     The greater number is 13
     ```
 
-* This program
+* This program,
     - Takes a single number as an argument
     - Checks whether the number is Odd or Even
     - Returns Odd or Even accordingly
@@ -272,7 +272,7 @@ lp -i job_id -H resume
     Even
     ```
 
-* This program 
+* This program,
     - Takes in two integers and an operation instruction 
     - Returns the value according to the operation
 
@@ -410,7 +410,7 @@ lp -i job_id -H resume
   ### while loop
 
 * This program, 
-    - Takes in a single number as argument
+    - Takes in a single integer as argument
     - Returns the factorial of that number
 
     ```bash
@@ -441,7 +441,7 @@ lp -i job_id -H resume
 
     while :
     do
-        read -p "Enter two numnbers ( - 1 to quit ) : " a b
+        read -p "Enter two numbers ( - 1 to quit ) : " a b
         if [ $a -eq -1 ]
         then
             break
@@ -519,7 +519,7 @@ lp -i job_id -H resume
     Greetings Mortals!
     ```
 
-*   This function, 
+*   This function,
     - Takes a directory as an argument
     - Loop through the files
     - Only returns the text files with full path
@@ -528,7 +528,7 @@ lp -i job_id -H resume
     ```bash
     #!/bin/bash
 
-    # declaring the function 
+    # declaring the function
     return_text () {
     dir=$1
     for file in $dir"/*.txt"
