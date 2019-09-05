@@ -1,5 +1,5 @@
 ## Table of Contents
-<!-- TOC --> 
+
 - [Introduction](#introduction)
 - [Shell](#shell)
 - [History](#history)
@@ -22,7 +22,6 @@
         - [while loop](#while-loop)
         - [functions](#functions)
 - [External Resource](#external-resources)
-<!-- /TOC -->
 
 ## Introduction
 
