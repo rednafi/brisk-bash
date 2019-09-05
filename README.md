@@ -1,3 +1,5 @@
+![Example image](https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -330,7 +332,7 @@ exit exit_code
 
 ### conditionals (if-else)
 
-* This program,
+* **Example-1:** This program,
     - Takes in two integers as arguments
     - Compares if one number is greater than the other or if they are equal
     - Returns the greater of the two numbers or if they are equal, returns equal
@@ -358,7 +360,7 @@ exit exit_code
     The greater number is 13
     ```
 
-* This program,
+* **Example-2:** This program,
     - Takes a single number as an argument
     - Checks whether the number is Odd or Even
     - Returns Odd or Even accordingly
@@ -379,7 +381,7 @@ exit exit_code
     Even
     ```
 
-* This program,
+* **Example-3:** This program,
     - Takes in two integers and an operation instruction 
     - Returns the value according to the operation
 
@@ -432,7 +434,7 @@ exit exit_code
 
 ### for loop
 
-* Looping through 0 to 9 with increment 3 and printing the numbers
+* **Example-1:** Looping through 0 to 9 with increment 3 and printing the numbers
 
     ```bash
     #!/bin/bash
@@ -451,7 +453,7 @@ exit exit_code
     9
     ```
 
-* Looping through files in a folder and printing them one by one
+* **Example-2:** Looping through files in a folder and printing them one by one
 
     ```bash
     #!/bin/bash
@@ -468,7 +470,7 @@ exit exit_code
     sorted_numbers.txt
     ```
 
-* This program, 
+* **Example-3:** This program, 
     - Doesn't take any argument
     - Returns the summation of all the integers, starting from 0, up to 100
 
@@ -488,7 +490,7 @@ exit exit_code
     Total sum is 5050
     ```
 
-* This program,
+* **Example-4:** This program,
     - Takes in an integer as an argument
     - Prints all the numbers up to that number, starting from 0
 
@@ -514,9 +516,9 @@ exit exit_code
     99
     ```
 
-  ### while loop
+### while loop
 
-* This program, 
+* **Example-1:** This program, 
     - Takes in a single integer as an argument
     - Returns the factorial of that number
 
@@ -538,7 +540,7 @@ exit exit_code
     Factorial of 5 is 120
     ```
 
-*   This program,
+*   **Example-2:** This program,
     - Takes two integers as arguments
     - Returns the summation of the numbers
     - Sending `-1` as an input quits the program
@@ -562,7 +564,7 @@ exit exit_code
     $ ./script.sh  10 20
     30
     ```
-*   This program,
+*   **Example-3:** This program,
     - Takes in a text filepath as argument
     - Reads and prints out each line of the file
 
@@ -586,12 +588,12 @@ exit exit_code
     10
     ```
 
-  ### functions
+### functions
 
-    Functions are incredible tools when we need to reuse code. Creating functions are fairly straight 
-    forward in bash.
+Functions are incredible tools when we need to reuse code. Creating functions are fairly straight 
+forward in bash.
 
-*   This function,
+* **Example-1:** This function,
 
     - Takes a directory as an input argument
     - Counts the number of files in that directory and prints that out
@@ -614,7 +616,7 @@ exit exit_code
     $ 2
     ```
 
-*   This function,
+*   **Example-2:** This function,
     - Takes in a shortcode for any of the following languages
       (a) `en` for English
       (b) `fr` for French
@@ -650,7 +652,7 @@ exit exit_code
     Greetings Mortals!
     ```
 
-*   This function,
+*   **Example-3:** This function,
     - Takes a directory as an argument
     - Loop through the files
     - Only returns the text files with full path
