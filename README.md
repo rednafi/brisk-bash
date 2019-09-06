@@ -353,6 +353,9 @@ exit exit_code
     then
         echo "The greater number is $number2"
     fi
+
+    # exits the program if the execution is unsuccessful
+    set -e 
     ```
     ```
     $ ./script.sh 12 13
@@ -374,6 +377,9 @@ exit exit_code
     else 
         echo "Odd"
     fi
+
+    # exits the program if the execution is unsuccessful
+    set -e 
     ```
     ```
     $ ./script.sh 20
@@ -425,6 +431,9 @@ exit exit_code
             echo "division: $ans"
 
     fi
+
+    # exits the program if the execution is unsuccessful
+    set -e 
     ```
     ```
     $ ./script.sh 12 13 add
@@ -442,6 +451,9 @@ exit exit_code
     do
         echo $var
     done
+
+    # exits the program if the execution is unsuccessful
+    set -e 
     ```
 
     ```
@@ -461,6 +473,9 @@ exit exit_code
     do
         echo $file
     done
+
+    # exits the program if the execution is unsuccessful
+    set -e 
     ```
 
     ```
@@ -482,6 +497,9 @@ exit exit_code
         sum=$(($sum + $num))
     done
     echo "Total sum is $sum"
+
+    # exits the program if the execution is unsuccessful
+    set -e 
     ```
 
     ```
@@ -504,6 +522,9 @@ exit exit_code
         echo $num
     fi
     done
+
+    # exits the program if the execution is unsuccessful
+    set -e 
     ```
 
     ```
@@ -532,6 +553,9 @@ exit exit_code
     counter=$(( $counter - 1 ))
     done
     echo "Factorial of $1 is $factorial"
+
+    # exits the program if the execution is unsuccessful
+    set -e 
     ```
 
     ```
@@ -557,6 +581,9 @@ exit exit_code
         ans=$(( a + b ))
         echo $ans
     done
+
+    # exits the program if the execution is unsuccessful
+    set -e 
     ```
 
     ```
@@ -576,6 +603,9 @@ exit exit_code
     do
         echo $line
     done < "$file"
+
+    # exits the program if the execution is unsuccessful
+    set -e 
     ```
     ```
     $ ./script.sh files/numbers.txt
@@ -609,6 +639,9 @@ forward in bash.
 
     # calling the function
     echo $( file_count $1 )
+
+    # exits the program if the execution is unsuccessful
+    set -e 
     ```
     ```
     $ ./script.sh ./files
@@ -645,6 +678,9 @@ forward in bash.
 
     # calling the function
     echo $( greetings $1 )
+
+    # exits the program if the execution is unsuccessful
+    set -e 
     ```
     ```
     $ ./script.sh en
@@ -671,6 +707,9 @@ forward in bash.
     }
 
     echo "$( return_text $1 )"
+
+    # exits the program if the execution is unsuccessful
+    set -e 
     ```
     ```
     $ ./script.sh
