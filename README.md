@@ -339,6 +339,10 @@ exit exit_code
     ```bash
     #!/bin/bash
 
+    # using an unofficial bash strict mode for easier debugging
+    set -euo pipefail
+    IFS=$'\n\t'
+
     number1=$1
     number2=$2
     if [ $number1 -eq $number2 ]
@@ -353,9 +357,6 @@ exit exit_code
     then
         echo "The greater number is $number2"
     fi
-
-    # exits the program if the execution is unsuccessful
-    set -e 
     ```
     ```
     $ ./script.sh 12 13
@@ -370,6 +371,10 @@ exit exit_code
     ```bash
     #!/bin/bash
 
+    # using an unofficial bash strict mode for easier debugging
+    set -euo pipefail
+    IFS=$'\n\t'
+
     number=$1
     if [ $((number%2)) -eq 0 ]
     then 
@@ -377,9 +382,6 @@ exit exit_code
     else 
         echo "Odd"
     fi
-
-    # exits the program if the execution is unsuccessful
-    set -e 
     ```
     ```
     $ ./script.sh 20
@@ -393,6 +395,10 @@ exit exit_code
 
     ```bash
     #!/bin/bash
+
+    # using an unofficial bash strict mode for easier debugging
+    set -euo pipefail
+    IFS=$'\n\t'
 
     echo "Enter two numbers and the intended operation:
     * for addition, write add
@@ -431,9 +437,6 @@ exit exit_code
             echo "division: $ans"
 
     fi
-
-    # exits the program if the execution is unsuccessful
-    set -e 
     ```
     ```
     $ ./script.sh 12 13 add
@@ -447,13 +450,14 @@ exit exit_code
     ```bash
     #!/bin/bash
 
+    # using an unofficial bash strict mode for easier debugging
+    set -euo pipefail
+    IFS=$'\n\t'
+
     for var in {0..9..3}
     do
         echo $var
     done
-
-    # exits the program if the execution is unsuccessful
-    set -e 
     ```
 
     ```
@@ -469,13 +473,14 @@ exit exit_code
     ```bash
     #!/bin/bash
 
+    # using an unofficial bash strict mode for easier debugging
+    set -euo pipefail
+    IFS=$'\n\t'
+
     for file in $(ls ./files) 
     do
         echo $file
     done
-
-    # exits the program if the execution is unsuccessful
-    set -e 
     ```
 
     ```
@@ -491,15 +496,16 @@ exit exit_code
     ```bash
     #!/bin/bash
 
+    # using an unofficial bash strict mode for easier debugging
+    set -euo pipefail
+    IFS=$'\n\t'
+
     sum=0
     for num in $(seq 0 100)
     do 
         sum=$(($sum + $num))
     done
     echo "Total sum is $sum"
-
-    # exits the program if the execution is unsuccessful
-    set -e 
     ```
 
     ```
@@ -514,6 +520,10 @@ exit exit_code
     ```bash
     #!/bin/bash
 
+    # using an unofficial bash strict mode for easier debugging
+    set -euo pipefail
+    IFS=$'\n\t'
+
     input_number=$1
     for num in $(seq 0 $input_number)
     do 
@@ -522,9 +532,6 @@ exit exit_code
         echo $num
     fi
     done
-
-    # exits the program if the execution is unsuccessful
-    set -e 
     ```
 
     ```
@@ -545,6 +552,10 @@ exit exit_code
     ```bash
     #!/bin/bash
 
+    # using an unofficial bash strict mode for easier debugging
+    set -euo pipefail
+    IFS=$'\n\t'
+
     counter=$1
     factorial=1
     while [ $counter -gt 0 ] 
@@ -553,9 +564,6 @@ exit exit_code
     counter=$(( $counter - 1 ))
     done
     echo "Factorial of $1 is $factorial"
-
-    # exits the program if the execution is unsuccessful
-    set -e 
     ```
 
     ```
@@ -571,6 +579,10 @@ exit exit_code
     ```bash
     #!/bin/bash
 
+    # using an unofficial bash strict mode for easier debugging
+    set -euo pipefail
+    IFS=$'\n\t'
+
     while :
     do
         read -p "Enter two numbers ( - 1 to quit ) : " a b
@@ -581,9 +593,6 @@ exit exit_code
         ans=$(( a + b ))
         echo $ans
     done
-
-    # exits the program if the execution is unsuccessful
-    set -e 
     ```
 
     ```
@@ -597,15 +606,16 @@ exit exit_code
     ```bash 
     #!/bin/bash
 
+    # using an unofficial bash strict mode for easier debugging
+    set -euo pipefail
+    IFS=$'\n\t'
+
     file=$1
 
     while read -r line
     do
         echo $line
     done < "$file"
-
-    # exits the program if the execution is unsuccessful
-    set -e 
     ```
     ```
     $ ./script.sh files/numbers.txt
@@ -632,6 +642,10 @@ forward in bash.
     ```bash
     #!/bin/bash
 
+    # using an unofficial bash strict mode for easier debugging
+    set -euo pipefail
+    IFS=$'\n\t'
+
     # declaring the function
     file_count () {
         ls -1 $1 | wc -l
@@ -639,9 +653,6 @@ forward in bash.
 
     # calling the function
     echo $( file_count $1 )
-
-    # exits the program if the execution is unsuccessful
-    set -e 
     ```
     ```
     $ ./script.sh ./files
@@ -659,6 +670,10 @@ forward in bash.
 
     ```bash
     #!/bin/bash
+
+    # using an unofficial bash strict mode for easier debugging
+    set -euo pipefail
+    IFS=$'\n\t'
     
     # declaring the function
     greetings () {
@@ -678,9 +693,6 @@ forward in bash.
 
     # calling the function
     echo $( greetings $1 )
-
-    # exits the program if the execution is unsuccessful
-    set -e 
     ```
     ```
     $ ./script.sh en
@@ -696,6 +708,10 @@ forward in bash.
     ```bash
     #!/bin/bash
 
+    # using an unofficial bash strict mode for easier debugging
+    set -euo pipefail
+    IFS=$'\n\t'
+
     # declaring the function
     return_text () {
     dir=$1
@@ -707,9 +723,6 @@ forward in bash.
     }
 
     echo "$( return_text $1 )"
-
-    # exits the program if the execution is unsuccessful
-    set -e 
     ```
     ```
     $ ./script.sh
