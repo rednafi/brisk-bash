@@ -343,10 +343,9 @@ When you need to execute multiple shell commands sequentially or want to do more
 
     # bash strict mode for easier debugging
     set -euo pipefail
-    IFS=$'\n\t'
 
-    number1=$1
-    number2=$2
+    number1="$1"
+    number2="$2"
     if [ $number1 -eq $number2 ]
     then
         echo "The numbers are equal"
@@ -375,10 +374,9 @@ When you need to execute multiple shell commands sequentially or want to do more
 
     # bash strict mode for easier debugging
     set -euo pipefail
-    IFS=$'\n\t'
 
-    number=$1
-    if [ $((number%2)) -eq 0 ]
+    number="$1"
+    if [ $(( number%2 )) -eq 0 ]
     then 
         echo "Even"
     else 
@@ -400,7 +398,6 @@ When you need to execute multiple shell commands sequentially or want to do more
 
     # bash strict mode for easier debugging
     set -euo pipefail
-    IFS=$'\n\t'
 
     echo "Enter two numbers and the intended operation:
     * for addition, write add
@@ -410,9 +407,9 @@ When you need to execute multiple shell commands sequentially or want to do more
 
     (write quit to quit the program)" 
 
-    num1=$1
-    num2=$2
-    operation=$3 
+    num1="$1"
+    num2="$2"
+    operation="$3" 
 
     if [ $num1 == "quit" ]
     then
@@ -454,7 +451,6 @@ When you need to execute multiple shell commands sequentially or want to do more
 
     # bash strict mode for easier debugging
     set -euo pipefail
-    IFS=$'\n\t'
 
     for var in {0..9..3}
     do
@@ -477,7 +473,6 @@ When you need to execute multiple shell commands sequentially or want to do more
 
     # bash strict mode for easier debugging
     set -euo pipefail
-    IFS=$'\n\t'
 
     for file in $(ls ./files) 
     do
@@ -500,7 +495,6 @@ When you need to execute multiple shell commands sequentially or want to do more
 
     # bash strict mode for easier debugging
     set -euo pipefail
-    IFS=$'\n\t'
 
     sum=0
     for num in $(seq 0 100)
@@ -524,9 +518,8 @@ When you need to execute multiple shell commands sequentially or want to do more
 
     # bash strict mode for easier debugging
     set -euo pipefail
-    IFS=$'\n\t'
 
-    input_number=$1
+    input_number="$1"
     for num in $(seq 0 $input_number)
     do 
     if [ $num -lt $input_number ]
@@ -556,11 +549,10 @@ When you need to execute multiple shell commands sequentially or want to do more
 
     # bash strict mode for easier debugging
     set -euo pipefail
-    IFS=$'\n\t'
 
-    counter=$1
+    counter="$1"
     factorial=1
-    while [ $counter -gt 0 ] 
+    while [ $counter -gt 0 ]
     do
     factorial=$(( $factorial * $counter ))
     counter=$(( $counter - 1 ))
@@ -583,40 +575,39 @@ When you need to execute multiple shell commands sequentially or want to do more
 
     # bash strict mode for easier debugging
     set -euo pipefail
-    IFS=$'\n\t'
 
     while :
     do
-        read -p "Enter two numbers ( - 1 to quit ) : " a b
+        read -p "Enter two numbers ( - 1 to quit ) : " "a" "b"
         if [ $a -eq -1 ]
         then
             break
         fi
-        ans=$(( a + b ))
+        ans=$(( $a + $b ))
         echo $ans
     done
     ```
 
     ```
-    $ ./script.sh  10 20
+    $ ./script.sh
+    Enter two numbers (-1 to quit): 20 30
     30
     ```
 *   **Example-3:** This program,
     - Takes in a text filepath as argument
     - Reads and prints out each line of the file
 
-    ```bash 
+    ```bash
     #!/bin/bash
 
     # bash strict mode for easier debugging
     set -euo pipefail
-    IFS=$'\n\t'
 
-    file=$1
+    file="$1"
 
     while read -r line
     do
-        echo $line
+        echo "$line"
     done < "$file"
     ```
     ```
@@ -646,11 +637,10 @@ forward in bash.
 
     # bash strict mode for easier debugging
     set -euo pipefail
-    IFS=$'\n\t'
 
     # declaring the function
     file_count () {
-        ls -1 $1 | wc -l
+        ls -1 "$1" | wc -l
     }
 
     # calling the function
@@ -675,11 +665,10 @@ forward in bash.
 
     # bash strict mode for easier debugging
     set -euo pipefail
-    IFS=$'\n\t'
     
     # declaring the function
     greetings () {
-        language=$1
+        language="$1"
         if [ $language == "en" ]
         then
             echo "Greetings Mortals!"
@@ -712,11 +701,10 @@ forward in bash.
 
     # bash strict mode for easier debugging
     set -euo pipefail
-    IFS=$'\n\t'
 
     # declaring the function
     return_text () {
-    dir=$1
+    dir="$1"
     for file in $dir"/*.txt"
     do
         echo "$( realpath $file )"
@@ -739,8 +727,8 @@ Your bash scripts will be more robust, reliable and easy to debug if it starts w
 ```bash
 #!/bin/bash
 set -euo pipefail
-IFS=$'\n\t'
 ```
+
 This can be regarded as an unofficial **bash strict mode** and often prevents many classes of sneaky bugs in your script. The above command can be synthesized into multiple commands. 
 
 `set -euo pipefail` is short for:
@@ -757,7 +745,9 @@ Let's have a look at each of them separately.
 
 * **set -o pipefail:** This setting prevents errors in a pipeline being masked. If any command in a pipeline fails, that return code will be used as the return code of the whole pipeline, not the last command's return code.
 
-* **Setting IFS:** IFS stands for **I**nternal **F**ield **S**eparator. It controls `word splitting` in bash. This governs how bash will iterate through a sequence and display that in the terminal.
+### Double Quote Your Variables
+It is generally a good practice to double quote your variables, specially user input variables where spaces are involved. 
+
 
 For a more in depth explanation of the different settings and Bash Strict Mode in general, check out, [AAron Maxwell's blog](http://redsymbol.net/articles/unofficial-bash-strict-mode/) on this topic.
 
