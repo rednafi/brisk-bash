@@ -339,7 +339,7 @@ exit exit_code
     ```bash
     #!/bin/bash
 
-    # using an unofficial bash strict mode for easier debugging
+    # bash strict mode for easier debugging
     set -euo pipefail
     IFS=$'\n\t'
 
@@ -371,7 +371,7 @@ exit exit_code
     ```bash
     #!/bin/bash
 
-    # using an unofficial bash strict mode for easier debugging
+    # bash strict mode for easier debugging
     set -euo pipefail
     IFS=$'\n\t'
 
@@ -396,7 +396,7 @@ exit exit_code
     ```bash
     #!/bin/bash
 
-    # using an unofficial bash strict mode for easier debugging
+    # bash strict mode for easier debugging
     set -euo pipefail
     IFS=$'\n\t'
 
@@ -450,7 +450,7 @@ exit exit_code
     ```bash
     #!/bin/bash
 
-    # using an unofficial bash strict mode for easier debugging
+    # bash strict mode for easier debugging
     set -euo pipefail
     IFS=$'\n\t'
 
@@ -473,7 +473,7 @@ exit exit_code
     ```bash
     #!/bin/bash
 
-    # using an unofficial bash strict mode for easier debugging
+    # bash strict mode for easier debugging
     set -euo pipefail
     IFS=$'\n\t'
 
@@ -496,7 +496,7 @@ exit exit_code
     ```bash
     #!/bin/bash
 
-    # using an unofficial bash strict mode for easier debugging
+    # bash strict mode for easier debugging
     set -euo pipefail
     IFS=$'\n\t'
 
@@ -520,7 +520,7 @@ exit exit_code
     ```bash
     #!/bin/bash
 
-    # using an unofficial bash strict mode for easier debugging
+    # bash strict mode for easier debugging
     set -euo pipefail
     IFS=$'\n\t'
 
@@ -552,7 +552,7 @@ exit exit_code
     ```bash
     #!/bin/bash
 
-    # using an unofficial bash strict mode for easier debugging
+    # bash strict mode for easier debugging
     set -euo pipefail
     IFS=$'\n\t'
 
@@ -579,7 +579,7 @@ exit exit_code
     ```bash
     #!/bin/bash
 
-    # using an unofficial bash strict mode for easier debugging
+    # bash strict mode for easier debugging
     set -euo pipefail
     IFS=$'\n\t'
 
@@ -606,7 +606,7 @@ exit exit_code
     ```bash 
     #!/bin/bash
 
-    # using an unofficial bash strict mode for easier debugging
+    # bash strict mode for easier debugging
     set -euo pipefail
     IFS=$'\n\t'
 
@@ -642,7 +642,7 @@ forward in bash.
     ```bash
     #!/bin/bash
 
-    # using an unofficial bash strict mode for easier debugging
+    # bash strict mode for easier debugging
     set -euo pipefail
     IFS=$'\n\t'
 
@@ -671,7 +671,7 @@ forward in bash.
     ```bash
     #!/bin/bash
 
-    # using an unofficial bash strict mode for easier debugging
+    # bash strict mode for easier debugging
     set -euo pipefail
     IFS=$'\n\t'
     
@@ -708,7 +708,7 @@ forward in bash.
     ```bash
     #!/bin/bash
 
-    # using an unofficial bash strict mode for easier debugging
+    # bash strict mode for easier debugging
     set -euo pipefail
     IFS=$'\n\t'
 
