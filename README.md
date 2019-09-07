@@ -36,7 +36,7 @@ Several layers of events take place whenever a Linux command is entered into the
 
 Let's look at an example:
 
-```
+```bash
 sort -n src/files/numbers.txt > src/files/sorted_numbers.txt
 ```
 
