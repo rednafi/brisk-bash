@@ -745,11 +745,10 @@ Let's have a look at each of them separately.
 
 * **set -o pipefail:** This setting prevents errors in a pipeline being masked. If any command in a pipeline fails, that return code will be used as the return code of the whole pipeline, not the last command's return code.
 
+For a more in depth explanation of the different settings and Bash Strict Mode in general, check out, [AAron Maxwell's blog](http://redsymbol.net/articles/unofficial-bash-strict-mode/) on this topic.
+
 ### Double Quote Your Variables
 It is generally a good practice to double quote your variables, specially user input variables where spaces are involved. 
-
-
-For a more in depth explanation of the different settings and Bash Strict Mode in general, check out, [AAron Maxwell's blog](http://redsymbol.net/articles/unofficial-bash-strict-mode/) on this topic.
 
 
 
