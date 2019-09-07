@@ -302,6 +302,8 @@ exit exit_code
 
 ## Basic Scripting Examples
 
+When you need to execute multiple shell commands sequentially or want to do more complex stuffs, it's better to enclose the commands in a bash script.
+
 ### Running a Shell Script
 
 * Create a file with `.sh` extension. I have used Ubuntu's built-in `nano` editor for that.
@@ -729,6 +731,37 @@ forward in bash.
     /home/redowan/code/bash/files/numbers.txt
     /home/redowan/code/bash/files/sorted_numbers.txt
     ```
+## Some Good Practices
+
+### Use a Bash Strict Mode 
+Your bash scripts will be more robust, reliable and easy to debug if it starts with:
+
+```bash
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+```
+This can be regarded as an unofficial **bash strict mode** and often prevents many classes of sneaky bugs in your script. The above command can be synthesized into multiple commands. 
+
+`set -euo pipefail` is short for:
+```
+set -e
+set -u
+set -o pipefail
+```
+Let's have a look at each of them separately.
+
+* **set-e:** This instruction forces the bash script to exit immediately if any command has a non zero exit status. If there is an issue in any of the lines in your code, the following lines simply won't run.
+
+* **set-u:** If your code has a reference to any variable that wasn't defined previously, this will cause the program to exit.
+
+* **set -o pipefail:** This setting prevents errors in a pipeline being masked. If any command in a pipeline fails, that return code will be used as the return code of the whole pipeline, not the last command's return code.
+
+* **Setting IFS:** IFS stands for **I**nternal **F**ield **S**eparator. It controls `word splitting` in bash. This governs how bash will iterate through a sequence and display that in the terminal.
+
+For a more in depth explanation of the different settings and Bash Strict Mode in general, check out, [AAron Maxwell's blog](http://redsymbol.net/articles/unofficial-bash-strict-mode/) on this topic.
+
+
 
 ## External Resources 
 
