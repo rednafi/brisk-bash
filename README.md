@@ -1,7 +1,7 @@
 <div align="center">
     
 # Brisk Shell
-Up and running with shell (bash) scripting in minutes
+Up and running with bash scripting in minutes
 
 <img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80" width="800" height="450" />
 
